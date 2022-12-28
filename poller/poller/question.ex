@@ -13,4 +13,9 @@ defmodule Poller.Question {
       description: description,
     }
   end
+
+  def add_choice(question, choice) do
+    choices = [choice | question.choices]
+    Map.put(questions, :choices, choices)
+  end
 }
