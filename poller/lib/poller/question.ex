@@ -1,4 +1,4 @@
-defmodule Poller.Question {
+defmodule Poller.Question do
   alias __MODULE__
 
   defstruct(
@@ -16,6 +16,6 @@ defmodule Poller.Question {
 
   def add_choice(question, choice) do
     choices = [choice | question.choices]
-    Map.put(questions, :choices, choices)
+    Map.put(question, :choices, choices)
   end
-}
+end
